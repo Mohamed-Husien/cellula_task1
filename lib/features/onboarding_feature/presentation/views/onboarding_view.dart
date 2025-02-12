@@ -1,4 +1,5 @@
 import 'package:cellula_task1_app/constants.dart';
+import 'package:cellula_task1_app/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatelessWidget {
@@ -12,9 +13,7 @@ class OnBoardingView extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShMfCSddxAf7XWxNmaOjlkAcP_LESTRRGGYQ&s',
-                ),
+                image: AssetImage(Assets.imagesTest),
                 fit: BoxFit.cover,
               ),
             ),
