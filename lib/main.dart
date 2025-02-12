@@ -1,6 +1,7 @@
 import 'package:cellula_task1_app/constants.dart';
-import 'package:cellula_task1_app/features/onboarding_feature/presentation/views/onboarding_view.dart';
+import 'package:cellula_task1_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: kPrimaryColor,
-        body: OnBoardingView(),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,
+        textTheme: GoogleFonts.leagueSpartanTextTheme(
+          ThemeData.dark().textTheme,
+        ),
       ),
     );
   }
