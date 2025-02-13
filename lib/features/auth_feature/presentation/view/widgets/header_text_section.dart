@@ -7,25 +7,28 @@ class HeaderTextSection extends StatelessWidget {
   final String text1, text2;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(text1, style: Styles.textStyle30
-            //
-            // const TextStyle(
-            //   color: Color(0xff2C385D),
-            //   fontSize: 32,
-            //   fontWeight: FontWeight.bold,
-            // ),
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(text1, style: Styles.textStyle30
+              //
+              // const TextStyle(
+              //   color: Color(0xff2C385D),
+              //   fontSize: 32,
+              //   fontWeight: FontWeight.bold,
+              // ),
+              ),
+          Text(
+            text2,
+            style: Styles.textStyle20.copyWith(
+              color: Colors.grey,
             ),
-        Text(
-          text2,
-          style: Styles.textStyle20.copyWith(
-            color: Colors.grey,
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
