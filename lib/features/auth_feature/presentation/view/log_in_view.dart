@@ -1,3 +1,4 @@
+import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/log_in_view_body.dart';
 import 'package:flutter/material.dart';
 
 class LogInView extends StatelessWidget {
@@ -5,6 +6,8 @@ class LogInView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: LogInViewBody(),
+    );
   }
 }
