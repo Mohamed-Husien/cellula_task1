@@ -1,9 +1,10 @@
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/header_text_section.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/log_in_section.dart';
+import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/sign_up_section.dart';
 import 'package:flutter/material.dart';
 
-class LogInViewBody extends StatelessWidget {
-  const LogInViewBody({super.key});
+class SignUpViewBody extends StatelessWidget {
+  const SignUpViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +19,13 @@ class LogInViewBody extends StatelessWidget {
                 height: 64,
               ),
               HeaderTextSection(
-                text1: "LOGIN",
-                text2: 'Login now to unlock a world of exclusive services',
+                text1: "SIGN UP",
+                text2: 'Create an account to get exclusive services',
               ),
               SizedBox(
                 height: 124,
               ),
-              LogInSection(),
+              SignUpSection(),
             ],
           ),
         ),
