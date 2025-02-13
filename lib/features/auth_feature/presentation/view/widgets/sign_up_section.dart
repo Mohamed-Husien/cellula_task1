@@ -1,6 +1,6 @@
-import 'package:cellula_task1_app/core/utils/app_router.dart';
 import 'package:cellula_task1_app/core/utils/styles.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/validate_email.dart';
+import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/validate_name.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/validate_password.dart';
 import 'package:cellula_task1_app/core/widgets/cutom_button.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/custom_text_button.dart';
@@ -32,6 +32,13 @@ class _SignUpSectionState extends State<SignUpSection> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            CustomTextFormField(
+              onChanged: (value) {
+                name = value;
+              },
+              validator: (value) => validateName(value),
+              hint: 'Name',
+            ),
             const SizedBox(height: 24),
             CustomTextFormField(
               onChanged: (value) {
@@ -76,12 +83,12 @@ class _SignUpSectionState extends State<SignUpSection> {
             //-------------------------------------------------
 
             CustomTextButton(
-                text: "DON't  HAVE AN ACCOUNT?",
+                text: "ALREADY HAVE AN ACCOUNT?",
                 style: Styles.textStyle14.copyWith(
                   color: const Color(0xff007BFF),
                 ),
                 onPressed: () {
-                  GoRouter.of(context).push(AppRouter.kSignUpViewPath);
+                  GoRouter.of(context).pop();
                 }),
           ],
         ),
