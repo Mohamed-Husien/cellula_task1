@@ -1,5 +1,7 @@
+import 'package:cellula_task1_app/core/utils/app_router.dart';
 import 'package:cellula_task1_app/core/widgets/cutom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpOrLoginViewBody extends StatelessWidget {
   const SignUpOrLoginViewBody({super.key});
@@ -44,7 +46,9 @@ class SignUpOrLoginViewBody extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: CustomButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(context).push(AppRouter.kLoginViewPath);
+                      },
                       backgroundColor: Colors.white,
                       textColor: Colors.black,
                       text: 'Log In',
