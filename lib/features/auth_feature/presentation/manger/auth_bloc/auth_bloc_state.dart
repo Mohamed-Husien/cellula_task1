@@ -5,13 +5,11 @@ sealed class AuthBlocState {}
 
 final class AuthBlocInitial extends AuthBlocState {}
 
-final class AuthInitial extends AuthBlocState {}
+final class SignUpInitial extends AuthBlocState {}
 
-final class RegisterInitial extends AuthBlocState {}
+final class SignUpLoading extends AuthBlocState {}
 
-final class RegisterLoading extends AuthBlocState {}
-
-final class RegisterSuccess extends AuthBlocState {}
+final class SignUpSuccess extends AuthBlocState {}
 
 final class RegisterFailure extends AuthBlocState {
   final String errMessage;
@@ -19,16 +17,16 @@ final class RegisterFailure extends AuthBlocState {
   RegisterFailure({required this.errMessage});
 }
 
-final class SignInitial extends AuthBlocState {}
+final class LoginInitial extends AuthBlocState {}
 
-final class SignInSuccess extends AuthBlocState {}
+final class LoginSuccess extends AuthBlocState {}
 
-final class SignInLoading extends AuthBlocState {}
+final class LoginLoading extends AuthBlocState {}
 
-final class SignInFailure extends AuthBlocState {
+final class LoginFailure extends AuthBlocState {
   final String errMessage;
 
-  SignInFailure({required this.errMessage});
+  LoginFailure({required this.errMessage});
 }
 
 final class StoreUserDataInitial extends AuthBlocState {}

@@ -1,4 +1,5 @@
 import 'package:cellula_task1_app/core/utils/styles.dart';
+import 'package:cellula_task1_app/features/auth_feature/presentation/manger/auth_bloc/auth_bloc_bloc.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/validate_email.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/validate_name.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/validate_password.dart';
@@ -6,6 +7,7 @@ import 'package:cellula_task1_app/core/widgets/cutom_button.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/custom_text_button.dart';
 import 'package:cellula_task1_app/features/auth_feature/presentation/view/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class SignUpSection extends StatefulWidget {
@@ -74,6 +76,11 @@ class _SignUpSectionState extends State<SignUpSection> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
+
+                    BlocProvider.of<AuthBloc>(context).add(RegisterEvent(
+                      email: email!,
+                      password: password!,
+                    ));
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                   }
