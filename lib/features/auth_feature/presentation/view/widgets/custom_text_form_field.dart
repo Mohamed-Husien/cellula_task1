@@ -1,3 +1,4 @@
+import 'package:cellula_task1_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -30,22 +31,29 @@ class CustomTextFormField extends StatelessWidget {
       validator: validator,
       maxLines: maxLines,
       cursorColor: const Color(0xff007BFF),
-      style: const TextStyle(
-        color: Colors.black, // <-- Change text color to white
-      ),
+      cursorErrorColor: Colors.red,
+      style: Styles.textStyle16,
       decoration: InputDecoration(
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+        filled: true,
+        fillColor: const Color(0xff242D4A),
         border: buildBorder(),
         label: Text(hint),
-        labelStyle: const TextStyle(
-          color: Color(0xff2C385D),
-        ),
+        labelStyle: Styles.textStyle14.copyWith(color: Colors.white),
+        errorBorder: buildBorder(Colors.redAccent),
         enabledBorder: buildBorder(const Color(0xff007BFF)),
         focusedBorder: buildBorder(const Color(0xff007BFF)),
+        focusedErrorBorder: buildBorder(Colors.redAccent),
+        errorStyle: Styles.textStyle14.copyWith(
+          color: Colors.redAccent,
+          fontWeight: FontWeight.bold,
+        ),
         hintText: hint,
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
-        hintStyle: const TextStyle(
-          color: Color(0xff2C385D),
+        hintStyle: Styles.textStyle14.copyWith(
+          color: Colors.white70,
         ),
       ),
     );
@@ -53,7 +61,7 @@ class CustomTextFormField extends StatelessWidget {
 
   OutlineInputBorder buildBorder([Color]) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(16),
       borderSide: BorderSide(
         color: Color ?? Colors.white,
       ),

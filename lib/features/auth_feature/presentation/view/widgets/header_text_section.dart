@@ -12,14 +12,10 @@ class HeaderTextSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(text1, style: Styles.textStyle30
-              //
-              // const TextStyle(
-              //   color: Color(0xff2C385D),
-              //   fontSize: 32,
-              //   fontWeight: FontWeight.bold,
-              // ),
-              ),
+          Text(
+            text1,
+            style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
+          ),
           Text(
             text2,
             style: Styles.textStyle20.copyWith(
