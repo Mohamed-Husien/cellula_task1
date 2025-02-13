@@ -33,7 +33,9 @@ class SignUpOrLoginViewBody extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: CustomButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(context).push(AppRouter.kSignUpViewPath);
+                      },
                       backgroundColor: const Color(0xff014BB4),
                       textColor: Colors.white,
                       text: 'Sign Up ',
