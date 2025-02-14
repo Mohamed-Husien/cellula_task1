@@ -9,10 +9,10 @@ class LoginEvent extends AuthBlocEvent {
   LoginEvent({required this.email, required this.password});
 }
 
-class RegisterEvent extends AuthBlocEvent {
+class SignUpEvent extends AuthBlocEvent {
   final String email, password;
 
-  RegisterEvent({required this.email, required this.password});
+  SignUpEvent({required this.email, required this.password});
 }
 
 class StoreUserData extends AuthBlocEvent {

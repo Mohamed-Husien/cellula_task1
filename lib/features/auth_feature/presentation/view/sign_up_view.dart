@@ -17,7 +17,7 @@ class SignUpView extends StatelessWidget {
       listener: (context, state) {
         if (state is SignUpLoading) {
           isLoading = true;
-        } else if (state is SignUpSuccess) {
+        } else if (state is signUpSuccess) {
           showSnackBarFun(context, 'Sign Up done successfully');
           isLoading = false;
         } else if (state is RegisterFailure) {

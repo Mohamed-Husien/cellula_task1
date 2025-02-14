@@ -9,7 +9,7 @@ final class SignUpInitial extends AuthBlocState {}
 
 final class SignUpLoading extends AuthBlocState {}
 
-final class SignUpSuccess extends AuthBlocState {}
+final class signUpSuccess extends AuthBlocState {}
 
 final class RegisterFailure extends AuthBlocState {
   final String errMessage;

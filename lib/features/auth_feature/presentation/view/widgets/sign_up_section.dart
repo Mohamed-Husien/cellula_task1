@@ -72,12 +72,12 @@ class _SignUpSectionState extends State<SignUpSection> {
                   fontWeight: FontWeight.bold,
                 ),
                 backgroundColor: Colors.blue,
-                text: "LOGIN",
+                text: "Sign Up",
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
 
-                    BlocProvider.of<AuthBloc>(context).add(RegisterEvent(
+                    BlocProvider.of<AuthBloc>(context).add(SignUpEvent(
                       email: email!,
                       password: password!,
                     ));
