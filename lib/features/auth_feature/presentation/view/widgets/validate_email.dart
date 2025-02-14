@@ -2,7 +2,9 @@ String? validateEmail(String? value) {
   if (value == null || value.isEmpty) {
     return 'Please enter an email address';
   }
-
+  if (!value.contains('.com')) {
+    return "Invalid email address.";
+  }
   // Regular expression for basic email validation
   final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 
