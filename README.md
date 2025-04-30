@@ -1,6 +1,6 @@
 # 🏋️‍♂️ OnBoarding & Auth Screens – Cellula Technologies Internship Task
 
-![Preview](assets/sport_onboarding_preview.jpg)
+
 
 This project was developed as part of my internship at **Cellula Technologies**.  
 It includes the **onBoarding flow** and a **Login/Sign Up form** for a sports app, built with clean architecture using the **MVVM pattern** and **Firebase Authentication**.
